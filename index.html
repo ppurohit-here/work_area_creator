@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Area Allocation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="app-header">Work Area Creator</h1>
+    <div class="top-section">
+        <!-- Logo and Instructions -->
+        <div class="logo-instructions">
+            <img src="map-logo.png" alt="HERE Logo" class="logo">
+            <div class="instructions">
+                <h2>App Instructions</h2>
+                <p>1. Enter the total task count and total users.<br>
+                   2. Choose a group key name.<br>
+                   3. Select user-based or task-based allocation.<br>
+                   4. Click "Generate Work Areas" to see results.</p>
+            </div>
+        </div>
+
+       
+        
+
+    <div class="main-section">
+        <!-- Input Rectangle -->
+        <div class="input-area">
+            <label for="totalCounts">Total Task Counts:</label>
+            <input type="number" id="totalCounts" placeholder="Enter total counts">
+
+            <label for="totalUsers">Total Users:</label>
+            <input type="number" id="totalUsers" placeholder="Enter total users">
+
+            <label for="groupKey">Group Key Name (e.g., Work Area):</label>
+            <input type="text" id="groupKey" placeholder="Enter Group Key (e.g., Work Area)">
+
+            <!-- Checkboxes for allocation type -->
+            <div class="checkbox-area">
+                <input type="checkbox" id="userBased" name="allocationType">
+                <label for="userBased">User-based allocation</label>
+                <input type="checkbox" id="taskBased" name="allocationType">
+                <label for="taskBased">Task-based allocation (250 tasks)</label>
+            </div>
+
+            <!-- Generate Button -->
+<button id="generateBtn">Generate Work Areas</button>
+<div class="result-section">    
+    <table id="output-table">
+        <thead>
+            <tr>
+                <th>GrpKey</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <button id="copyBtn">Copy to Clipboard</button>
+        </table>
+        
+            <!-- Results will be dynamically inserted here -->
+        </tbody>
+</div>
+
+        <!-- Result Section -->
+        
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; HERE All Rights Reserved</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
